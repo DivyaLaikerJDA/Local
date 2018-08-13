@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>mapping</display-name>
+	<filter>
+	<filter-name>MyFilter</filter-name>
+	<filter-class>com.jda.Filter.validation</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>MyFilter</filter-name>
+	<url-pattern>/register</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.jda.servlets.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RegisterController</servlet-name>
+		<servlet-class>com.jda.servlets.controller.RegisterController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>RegisterController</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LogoutController</servlet-name>
+		<servlet-class>com.jda.servlets.controller.LogoutController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutController</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+</web-app>
