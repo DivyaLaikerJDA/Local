@@ -6,17 +6,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
 
 <title>Login</title>
+<script type="text/javascript" src="js/Validation.js"></script>
 </head>
 <body>
 <a href="index.jsp"><button type="button">back</button></a>
 <center>
 <h1>Hello new user</h1>
-<form action="register"  name="register" method="POST" >
+<form action="register"  name="register" method="POST" onSubmit="return doValidate()">
 FirstName:<input type="text" name="firstName"><br>
 LastName:<input type="text" name="lastName"><br>
 UserName:<input type="text" name="userName"><br>
-Password:<input type="password" name="password"><br>
-Email:<input type="text" name="email"><br>
+Password:<input type="password" id="password" name="password"><br>
+Email:<input type="text" id="email" name="email"><br>
 
 Gender:
  <input type="radio" name="gender" value="male" checked> Male&nbsp;
@@ -26,7 +27,7 @@ Gender:
   
    <input type="radio" name="policy" value="agree" checked> yes i agree&nbsp;
   <input type="radio" name="policy" value="disagree">sorry I do not agree with the policies &nbsp;<br>
-  <button type="submit" >Submit</button>
+  <input type="submit" >Submit
 </form>
 </center>
 </body>
